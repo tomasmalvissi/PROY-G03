@@ -8,5 +8,6 @@ namespace G3.CLASS
 {
     public class Class1
     {
+        //////////
     }
 }
