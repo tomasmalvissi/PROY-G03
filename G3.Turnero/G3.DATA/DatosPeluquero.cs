@@ -1,7 +1,6 @@
 ﻿using G3.CLASS;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -9,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace G3.DATA
 {
-    public class DatosClientes : DatosConexion
+    public class DatosPeluquero : DatosConexion
     {
-        public int AltaClientes(string accion, Cliente clientes) 
+        public int AltaClientes(string accion, Peluquero peluquero)
         {
             int resultado = 0;
             string orden = string.Empty;
@@ -19,9 +18,10 @@ namespace G3.DATA
             switch (accion)
             {
                 case "Alta":
-                    orden = "insert into Clientes " + "values ("
-                                            + "'" + clientes.Id + "',"
-                                            + "'" + clientes.Nombre_Apellido + "'"
+                    orden = "insert into Peluqueros " + "values ("
+                                            + "'" + peluquero.Id + "',"
+                                            + "'" + peluquero.Nombre + "',"
+                                            + "'" + peluquero.Espejo + "'"
                                             + ");";
                     break;
             }
@@ -35,7 +35,7 @@ namespace G3.DATA
             catch (Exception e)
             {
 
-                throw new Exception("Error al tratar de cargar los datos de Cliente", e);
+                throw new Exception("Error al tratar de cargar los datos de Peluqueros", e);
             }
             finally
             {

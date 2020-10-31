@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace G3.DATA
 {
-    public class DatosTurnos : DatosConexion
+    public class DatosHorarios : DatosConexion
     {
-        public int ABMTurnos(string accion, Turno turnos)
+        public int ABMHorarios(string accion, Horario horarios)
         {
             int resultado = 0;
             string orden = string.Empty;
@@ -19,25 +19,21 @@ namespace G3.DATA
             switch (accion)
             {
                 case "Alta":
-                    orden = "insert into Turnos " + "values ("
-                                            + "'" + turnos.DateTime + "',"
-                                            + "'" + turnos.TareaId + "',"
-                                            + "'" + turnos.ClienteId + "',"
-                                            + "'" + turnos.PeluqueroId + "'"
+                    orden = "insert into Horarios " + "values ("
+                                            + "'" + horarios.DiaHora + "',"
+                                            + "'" + horarios.PeluqueroId + "'"
                                             + ");";
                     break;
 
                 case "Modificar":
-                    orden = "update Turnos set "
-                                        + "DateTime= '" + turnos.DateTime + "',"
-                                        + "TareaId= '" + turnos.TareaId + "',"
-                                        + "ClienteId= '" + turnos.ClienteId + "',"
-                                        + "PeluqueroId= '" + turnos.PeluqueroId + "'"
-                                        + "where Id= " + turnos.Id;
+                    orden = "update Horarios set "
+                                        + "DateTime= '" + horarios.DiaHora + "',"
+                                        + "PeluqueroId= '" + horarios.PeluqueroId + "'"
+                                        + "where Id= " + horarios.Id;
                     break;
 
                 case "Eliminar":
-                    orden = "Delete from Turnos where Id = " + turnos.Id;
+                    orden = "Delete from Horarios where Id = " + horarios.Id;
                     break;
             }
 
@@ -50,7 +46,7 @@ namespace G3.DATA
             catch (Exception e)
             {
 
-                throw new Exception("Error al tratar de modificar los registros de Turnos", e);
+                throw new Exception("Error al tratar de modificar los registros de Horas", e);
             }
             finally
             {
@@ -60,13 +56,13 @@ namespace G3.DATA
             return resultado;
         }
 
-        public DataSet MostrarTurnos(string cual)
+        public DataSet MostrarHorarios(string cual)
         {
             string orden = string.Empty;
             if (cual != "Todos")
-                orden = "select * from Turnos where Id = " + int.Parse(cual) + ";";
+                orden = "select * from Horarios where Id = " + int.Parse(cual) + ";";
             else
-                orden = "select * from Turnos;";
+                orden = "select * from Horarios;";
 
             SqlCommand sqlcmd = new SqlCommand(orden, conexion);
             DataSet ds = new DataSet();
