@@ -55,17 +55,25 @@
     <Compile Include="Data\DataContext.cs" />
     <Compile Include="Espejo.cs" />
     <Compile Include="Horario.cs" />
+    <Compile Include="Migrations\202010310252394_new.cs" />
+    <Compile Include="Migrations\202010310252394_new.designer.cs">
+      <DependentUpon>202010310252394_new.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Peluquero.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Tarea.cs" />
-    <Compile Include="TareaTurno.cs" />
     <Compile Include="Turno.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202010310252394_new.resx">
+      <DependentUpon>202010310252394_new.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

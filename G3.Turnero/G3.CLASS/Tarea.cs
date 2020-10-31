@@ -16,7 +16,7 @@ namespace G3.CLASS
         [Required]
         public string Descripcion { get; set; }
         [Required]
-        public int Tiempo { get; set; }
+        public string Tiempo { get; set; }
         [Required]
         public int Valor { get; set; }
         public int ProductoId { get; set; }

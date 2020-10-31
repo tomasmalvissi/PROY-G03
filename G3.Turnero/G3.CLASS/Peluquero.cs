@@ -17,6 +17,5 @@ namespace G3.CLASS
         public int EspejoId { get; set; }
         [ForeignKey("EspejoId")]
         public Espejo Espejo { get; set; }
-        public Turno Turno { get; internal set; }
     }
 }
