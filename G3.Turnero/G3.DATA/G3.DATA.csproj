@@ -41,7 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatosClientes.cs" />
+    <Compile Include="DatosConexion.cs" />
+    <Compile Include="DatosTurnos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\G3.CLASS\G3.CLASS.csproj">
+      <Project>{9C145CF5-9DC6-4DEA-98F8-9DD1CFBF2549}</Project>
+      <Name>G3.CLASS</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
