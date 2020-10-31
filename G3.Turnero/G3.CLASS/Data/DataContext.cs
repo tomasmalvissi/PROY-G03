@@ -17,7 +17,6 @@ namespace G3.CLASS.Data
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Producto> Productos { get; set; }
         public DbSet<Horario> Horarios { get; set; }
-        public DbSet<Espejo> Espejos { get; set; }
         public DbSet<Tarea> Tareas { get; set; }
         public DbSet<Peluquero> Peluqueros { get; set; }
         public DbSet<Turno> Turnos { get; set; }

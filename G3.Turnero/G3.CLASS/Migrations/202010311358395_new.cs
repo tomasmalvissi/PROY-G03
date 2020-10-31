@@ -11,16 +11,8 @@
                 "dbo.Clientes",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        Id = c.Int(nullable: false),
                         Nombre_Apellido = c.String(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id);
-            
-            CreateTable(
-                "dbo.Espejos",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -41,13 +33,11 @@
                 "dbo.Peluqueros",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        Id = c.Int(nullable: false),
                         Nombre = c.String(nullable: false),
-                        EspejoId = c.Int(nullable: false),
+                        Espejo = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Espejos", t => t.EspejoId, cascadeDelete: true)
-                .Index(t => t.EspejoId);
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.Productos",
@@ -100,19 +90,16 @@
             DropForeignKey("dbo.Turnos", "ClienteId", "dbo.Clientes");
             DropForeignKey("dbo.Tareas", "ProductoId", "dbo.Productos");
             DropForeignKey("dbo.Horarios", "PeluqueroId", "dbo.Peluqueros");
-            DropForeignKey("dbo.Peluqueros", "EspejoId", "dbo.Espejos");
             DropIndex("dbo.Turnos", new[] { "PeluqueroId" });
             DropIndex("dbo.Turnos", new[] { "ClienteId" });
             DropIndex("dbo.Turnos", new[] { "TareaId" });
             DropIndex("dbo.Tareas", new[] { "ProductoId" });
-            DropIndex("dbo.Peluqueros", new[] { "EspejoId" });
             DropIndex("dbo.Horarios", new[] { "PeluqueroId" });
             DropTable("dbo.Turnos");
             DropTable("dbo.Tareas");
             DropTable("dbo.Productos");
             DropTable("dbo.Peluqueros");
             DropTable("dbo.Horarios");
-            DropTable("dbo.Espejos");
             DropTable("dbo.Clientes");
         }
     }

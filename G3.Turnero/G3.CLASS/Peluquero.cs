@@ -11,12 +11,11 @@ namespace G3.CLASS
     [Table("Peluqueros")]
     public class Peluquero
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         [Required]
         public string Nombre { get; set; }
         [Required]
-        public int EspejoId { get; set; }
-        [ForeignKey("EspejoId")]
-        public Espejo Espejo { get; set; }
+        public int Espejo { get; set; }
     }
 }

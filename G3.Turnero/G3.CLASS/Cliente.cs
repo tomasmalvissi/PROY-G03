@@ -11,6 +11,7 @@ namespace G3.CLASS
     [Table("Clientes")]
     public class Cliente
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         [Required]
         public string Nombre_Apellido { get; set; }
