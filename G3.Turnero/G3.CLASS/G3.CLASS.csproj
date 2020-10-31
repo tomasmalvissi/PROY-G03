@@ -54,9 +54,9 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Data\DataContext.cs" />
     <Compile Include="Horario.cs" />
-    <Compile Include="Migrations\202010311358395_new.cs" />
-    <Compile Include="Migrations\202010311358395_new.designer.cs">
-      <DependentUpon>202010311358395_new.cs</DependentUpon>
+    <Compile Include="Migrations\202010311732455_new.cs" />
+    <Compile Include="Migrations\202010311732455_new.designer.cs">
+      <DependentUpon>202010311732455_new.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Peluquero.cs" />
@@ -70,8 +70,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010311358395_new.resx">
-      <DependentUpon>202010311358395_new.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010311732455_new.resx">
+      <DependentUpon>202010311732455_new.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

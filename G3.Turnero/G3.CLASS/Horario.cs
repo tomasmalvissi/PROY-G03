@@ -15,9 +15,7 @@ namespace G3.CLASS
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
-        public string Dia { get; set; }
-        [Required]
-        public string Hora { get; set; }
+        public DateTime DiaHora { get; set; }
         [Required]
         public int PeluqueroId { get; set; }
         [ForeignKey("PeluqueroId")]

@@ -21,8 +21,7 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Dia = c.String(nullable: false),
-                        Hora = c.String(nullable: false),
+                        DiaHora = c.DateTime(nullable: false),
                         PeluqueroId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
