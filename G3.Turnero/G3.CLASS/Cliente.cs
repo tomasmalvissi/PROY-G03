@@ -8,14 +8,11 @@ using System.Threading.Tasks;
 
 namespace G3.CLASS
 {
+    [Table("Clientes")]
     public class Cliente
     {
         public int Id { get; set; }
         [Required]
         public string Nombre_Apellido { get; set; }
-        [Required]
-        public int Peluquero_Pref { get; set; }
-        [ForeignKey("Peluquero_Pref")]
-        public Peluquero Peluquero { get; set; }
     }
 }

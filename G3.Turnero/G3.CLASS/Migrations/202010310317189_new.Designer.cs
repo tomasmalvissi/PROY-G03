@@ -13,7 +13,7 @@ namespace G3.CLASS.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202010310252394_new"; }
+            get { return "202010310317189_new"; }
         }
         
         string IMigrationMetadata.Source

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace G3.CLASS
 {
+    [Table("Turnos")]
     public class Turno
     {
         [Key]

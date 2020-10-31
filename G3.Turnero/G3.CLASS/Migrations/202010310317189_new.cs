@@ -13,26 +13,11 @@
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Nombre_Apellido = c.String(nullable: false),
-                        Peluquero_Pref = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Peluqueroes", t => t.Peluquero_Pref, cascadeDelete: true)
-                .Index(t => t.Peluquero_Pref);
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Peluqueroes",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Nombre = c.String(nullable: false),
-                        EspejoId = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Espejoes", t => t.EspejoId, cascadeDelete: true)
-                .Index(t => t.EspejoId);
-            
-            CreateTable(
-                "dbo.Espejoes",
+                "dbo.Espejos",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -49,11 +34,23 @@
                         PeluqueroId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Peluqueroes", t => t.PeluqueroId, cascadeDelete: true)
+                .ForeignKey("dbo.Peluqueros", t => t.PeluqueroId, cascadeDelete: true)
                 .Index(t => t.PeluqueroId);
             
             CreateTable(
-                "dbo.Productoes",
+                "dbo.Peluqueros",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Nombre = c.String(nullable: false),
+                        EspejoId = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Espejos", t => t.EspejoId, cascadeDelete: true)
+                .Index(t => t.EspejoId);
+            
+            CreateTable(
+                "dbo.Productos",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -73,11 +70,11 @@
                         ProductoId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Productoes", t => t.ProductoId, cascadeDelete: true)
+                .ForeignKey("dbo.Productos", t => t.ProductoId, cascadeDelete: true)
                 .Index(t => t.ProductoId);
             
             CreateTable(
-                "dbo.Turnoes",
+                "dbo.Turnos",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -88,7 +85,7 @@
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Clientes", t => t.ClienteId, cascadeDelete: true)
-                .ForeignKey("dbo.Peluqueroes", t => t.PeluqueroId, cascadeDelete: false)
+                .ForeignKey("dbo.Peluqueros", t => t.PeluqueroId, cascadeDelete: true)
                 .ForeignKey("dbo.Tareas", t => t.TareaId, cascadeDelete: true)
                 .Index(t => t.TareaId)
                 .Index(t => t.ClienteId)
@@ -98,26 +95,24 @@
         
         public override void Down()
         {
-            DropForeignKey("dbo.Turnoes", "TareaId", "dbo.Tareas");
-            DropForeignKey("dbo.Turnoes", "PeluqueroId", "dbo.Peluqueroes");
-            DropForeignKey("dbo.Turnoes", "ClienteId", "dbo.Clientes");
-            DropForeignKey("dbo.Tareas", "ProductoId", "dbo.Productoes");
-            DropForeignKey("dbo.Horarios", "PeluqueroId", "dbo.Peluqueroes");
-            DropForeignKey("dbo.Clientes", "Peluquero_Pref", "dbo.Peluqueroes");
-            DropForeignKey("dbo.Peluqueroes", "EspejoId", "dbo.Espejoes");
-            DropIndex("dbo.Turnoes", new[] { "PeluqueroId" });
-            DropIndex("dbo.Turnoes", new[] { "ClienteId" });
-            DropIndex("dbo.Turnoes", new[] { "TareaId" });
+            DropForeignKey("dbo.Turnos", "TareaId", "dbo.Tareas");
+            DropForeignKey("dbo.Turnos", "PeluqueroId", "dbo.Peluqueros");
+            DropForeignKey("dbo.Turnos", "ClienteId", "dbo.Clientes");
+            DropForeignKey("dbo.Tareas", "ProductoId", "dbo.Productos");
+            DropForeignKey("dbo.Horarios", "PeluqueroId", "dbo.Peluqueros");
+            DropForeignKey("dbo.Peluqueros", "EspejoId", "dbo.Espejos");
+            DropIndex("dbo.Turnos", new[] { "PeluqueroId" });
+            DropIndex("dbo.Turnos", new[] { "ClienteId" });
+            DropIndex("dbo.Turnos", new[] { "TareaId" });
             DropIndex("dbo.Tareas", new[] { "ProductoId" });
+            DropIndex("dbo.Peluqueros", new[] { "EspejoId" });
             DropIndex("dbo.Horarios", new[] { "PeluqueroId" });
-            DropIndex("dbo.Peluqueroes", new[] { "EspejoId" });
-            DropIndex("dbo.Clientes", new[] { "Peluquero_Pref" });
-            DropTable("dbo.Turnoes");
+            DropTable("dbo.Turnos");
             DropTable("dbo.Tareas");
-            DropTable("dbo.Productoes");
+            DropTable("dbo.Productos");
+            DropTable("dbo.Peluqueros");
             DropTable("dbo.Horarios");
-            DropTable("dbo.Espejoes");
-            DropTable("dbo.Peluqueroes");
+            DropTable("dbo.Espejos");
             DropTable("dbo.Clientes");
         }
     }

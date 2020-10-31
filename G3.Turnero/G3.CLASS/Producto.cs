@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace G3.CLASS
 {
+    [Table("Productos")]
     public class Producto
     {
         [Key]
