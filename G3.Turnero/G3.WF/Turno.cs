@@ -12,7 +12,7 @@ namespace G3.WF
 {
     public partial class Turno : Form
     {
-        public Turno()
+        public Turno(string dni)
         {
             InitializeComponent();
         }
@@ -37,21 +37,16 @@ namespace G3.WF
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            Bienvenido b = new Bienvenido();
+            b.Show();
         }
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
-
-        
     }
 }

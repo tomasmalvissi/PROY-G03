@@ -88,5 +88,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\G3.CLASS\G3.CLASS.csproj">
+      <Project>{9C145CF5-9DC6-4DEA-98F8-9DD1CFBF2549}</Project>
+      <Name>G3.CLASS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\G3.DATA\G3.DATA.csproj">
+      <Project>{6C7D1D1C-0D8C-44A4-9E47-EBE4288890B2}</Project>
+      <Name>G3.DATA</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
