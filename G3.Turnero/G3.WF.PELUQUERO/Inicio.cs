@@ -17,6 +17,7 @@ namespace G3.WF.PELUQUERO
     {
         DatosPeluquero dp = new DatosPeluquero();
         Peluquero p = new Peluquero();
+        int espejo = 0;
         int flag = 0;
         public Inicio()
         {
@@ -57,9 +58,27 @@ namespace G3.WF.PELUQUERO
         {
             if (txt_Nombre.Text != "")
             {
-                //c.Nombre_Apellido = txt_Nombre.Text;
-                //c.Id = int.Parse(dni);
-                //dc.AltaClientes("Alta", c);
+                if (rb1.Checked == true)
+                {
+                    espejo = 1;
+                }
+                if (rb2.Checked == true)
+                {
+                    espejo = 2;
+                }
+                if (rb3.Checked == true)
+                {
+                    espejo = 3;
+                }
+                if (rb4.Checked == true)
+                {
+                    espejo = 4;
+                }
+
+                p.Nombre = txt_Nombre.Text;
+                p.Id = int.Parse(dni);
+                p.Espejo = espejo;
+                dp.AltaPeluquero("Alta", p);
             }
             else
             {
