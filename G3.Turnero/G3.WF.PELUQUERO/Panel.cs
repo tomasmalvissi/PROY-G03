@@ -91,7 +91,7 @@ namespace G3.WF.PELUQUERO
 
             lbl_id_turno.Text = dgv_Turnos.CurrentRow.Cells[0].Value.ToString();
             picker_turno.Value = Convert.ToDateTime(dgv_Turnos.CurrentRow.Cells[1].Value.ToString());
-            txt_ClienteId.Text = dgv_Turnos.CurrentRow.Cells[3].Value.ToString();
+            lblClienteId.Text = dgv_Turnos.CurrentRow.Cells[3].Value.ToString();
         }
 
         public void ABMHorario(string accion)
@@ -109,6 +109,28 @@ namespace G3.WF.PELUQUERO
                     break;
                 case "Eliminar":
                     dh.ABMHorarios("Eliminar", h);
+                    break;
+            }
+        }
+
+        public void ABMTurnos(string accion)
+        {
+            t.Id = Convert.ToInt32(lbl_id_turno.Text);
+            t.DateTime = picker_turno.Value;
+            t.TareaId = combo_TareaId.SelectedIndex + 1;
+            t.PeluqueroId = Convert.ToInt32(DNI);
+            t.ClienteId = Convert.ToInt32(lblClienteId.Text);
+
+            switch (accion)
+            {
+                case "Alta":
+                    dt.ABMTurnos("Alta", t);
+                    break;
+                case "Modificar":
+                    dt.ABMTurnos("Modificar", t);
+                    break;
+                case "Eliminar":
+                    dt.ABMTurnos("Eliminar", t);
                     break;
             }
         }
@@ -147,6 +169,18 @@ namespace G3.WF.PELUQUERO
         {
             ABMHorario("Eliminar");
             CargaDgHorarios();
+        }
+
+        private void btn_modifica_turno_Click(object sender, EventArgs e)
+        {
+            ABMTurnos("Modificar");
+            CargaDgTurnos();
+        }
+
+        private void btn_eliminar_turno_Click(object sender, EventArgs e)
+        {
+            ABMTurnos("Eliminar");
+            CargaDgTurnos();
         }
     }
 }
