@@ -59,10 +59,9 @@ namespace G3.DATA
         public DataSet MostrarHorarios(string cual)
         {
             string orden = string.Empty;
-            if (cual != "Todos")
-                orden = "select * from Horarios where Id = " + int.Parse(cual) + ";";
-            else
-                orden = "select * from Horarios;";
+            orden = "select h.Id, h.DiaHora, p.Id, p.Nombre " +
+                "from Horarios h, Peluqueros p " +
+                "where p.Id = h.PeluqueroId and p.Nombre like " + "'%" + cual + "%';";
 
             SqlCommand sqlcmd = new SqlCommand(orden, conexion);
             DataSet ds = new DataSet();

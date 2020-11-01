@@ -40,6 +40,7 @@ namespace G3.WF
             if (valor == "")
             {
                 txt_Nombre.Visible = true;
+                lblNombre.Visible = true;
                 Alta(dni);
             }
             if (valor != "")

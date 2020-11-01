@@ -28,67 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblPeluquero = new System.Windows.Forms.Label();
-            this.listBoxPelluqueros = new System.Windows.Forms.ListBox();
             this.lblDateTime = new System.Windows.Forms.Label();
             this.btnContinuar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkedListBoxTarea = new System.Windows.Forms.CheckedListBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rb_Tintura = new System.Windows.Forms.RadioButton();
+            this.rb_Crema = new System.Windows.Forms.RadioButton();
+            this.rb_Lavado = new System.Windows.Forms.RadioButton();
+            this.rb_Corte = new System.Windows.Forms.RadioButton();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            this.txt_Peluquero = new System.Windows.Forms.TextBox();
+            this.Id_Hs = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdPeluquero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Peluquero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPeluquero
             // 
             this.lblPeluquero.AutoSize = true;
             this.lblPeluquero.BackColor = System.Drawing.Color.PapayaWhip;
-            this.lblPeluquero.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeluquero.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeluquero.ForeColor = System.Drawing.SystemColors.InfoText;
             this.lblPeluquero.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblPeluquero.Location = new System.Drawing.Point(141, 35);
+            this.lblPeluquero.Location = new System.Drawing.Point(12, 48);
             this.lblPeluquero.Name = "lblPeluquero";
-            this.lblPeluquero.Size = new System.Drawing.Size(413, 39);
+            this.lblPeluquero.Size = new System.Drawing.Size(531, 37);
             this.lblPeluquero.TabIndex = 6;
-            this.lblPeluquero.Text = "Seleccioná un profesional";
+            this.lblPeluquero.Text = "Busque su peluquero de preferencia";
             this.lblPeluquero.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblPeluquero.Click += new System.EventHandler(this.lblPeluquero_Click);
-            // 
-            // listBoxPelluqueros
-            // 
-            this.listBoxPelluqueros.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBoxPelluqueros.FormattingEnabled = true;
-            this.listBoxPelluqueros.ItemHeight = 25;
-            this.listBoxPelluqueros.Items.AddRange(new object[] {
-            "Peluquero A",
-            "Peluquero B",
-            "Peluquero C",
-            "Peluquero D"});
-            this.listBoxPelluqueros.Location = new System.Drawing.Point(173, 89);
-            this.listBoxPelluqueros.Name = "listBoxPelluqueros";
-            this.listBoxPelluqueros.Size = new System.Drawing.Size(343, 54);
-            this.listBoxPelluqueros.TabIndex = 7;
-            this.listBoxPelluqueros.SelectedIndexChanged += new System.EventHandler(this.listBoxPelluqueros_SelectedIndexChanged);
             // 
             // lblDateTime
             // 
             this.lblDateTime.AutoSize = true;
             this.lblDateTime.BackColor = System.Drawing.Color.PapayaWhip;
-            this.lblDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateTime.ForeColor = System.Drawing.SystemColors.InfoText;
             this.lblDateTime.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblDateTime.Location = new System.Drawing.Point(161, 146);
+            this.lblDateTime.Location = new System.Drawing.Point(549, 48);
             this.lblDateTime.Name = "lblDateTime";
-            this.lblDateTime.Size = new System.Drawing.Size(386, 39);
+            this.lblDateTime.Size = new System.Drawing.Size(419, 37);
             this.lblDateTime.TabIndex = 8;
-            this.lblDateTime.Text = "Seleccioná fecha y hora";
+            this.lblDateTime.Text = "Seleccione una fecha y hora";
             this.lblDateTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblDateTime.Click += new System.EventHandler(this.lblDateTime_Click);
             // 
             // btnContinuar
             // 
             this.btnContinuar.BackColor = System.Drawing.Color.Honeydew;
             this.btnContinuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContinuar.Location = new System.Drawing.Point(352, 408);
+            this.btnContinuar.Location = new System.Drawing.Point(477, 389);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(152, 44);
             this.btnContinuar.TabIndex = 10;
@@ -100,11 +93,11 @@
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Honeydew;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(183, 408);
+            this.btnCancelar.Location = new System.Drawing.Point(308, 389);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(146, 44);
             this.btnCancelar.TabIndex = 11;
-            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Text = "Volver";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -112,64 +105,159 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.PapayaWhip;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(107, 252);
+            this.label1.Location = new System.Drawing.Point(75, 172);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(531, 39);
+            this.label1.Size = new System.Drawing.Size(332, 37);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Elegí el/los servicio/s que quieras";
+            this.label1.Text = "Seleccione un servicio";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // checkedListBoxTarea
+            // groupBox1
             // 
-            this.checkedListBoxTarea.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBoxTarea.FormattingEnabled = true;
-            this.checkedListBoxTarea.Items.AddRange(new object[] {
-            "Corte",
-            "Tintura",
-            "Lavado",
-            "Baño de crema"});
-            this.checkedListBoxTarea.Location = new System.Drawing.Point(173, 295);
-            this.checkedListBoxTarea.Name = "checkedListBoxTarea";
-            this.checkedListBoxTarea.Size = new System.Drawing.Size(343, 76);
-            this.checkedListBoxTarea.TabIndex = 13;
+            this.groupBox1.Controls.Add(this.rb_Tintura);
+            this.groupBox1.Controls.Add(this.rb_Crema);
+            this.groupBox1.Controls.Add(this.rb_Lavado);
+            this.groupBox1.Controls.Add(this.rb_Corte);
+            this.groupBox1.Location = new System.Drawing.Point(64, 229);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(343, 108);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Servicio";
             // 
-            // listBox1
+            // rb_Tintura
             // 
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 18;
-            this.listBox1.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D"});
-            this.listBox1.Location = new System.Drawing.Point(168, 191);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(348, 58);
-            this.listBox1.TabIndex = 14;
+            this.rb_Tintura.AutoSize = true;
+            this.rb_Tintura.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Tintura.Location = new System.Drawing.Point(201, 68);
+            this.rb_Tintura.Name = "rb_Tintura";
+            this.rb_Tintura.Size = new System.Drawing.Size(86, 28);
+            this.rb_Tintura.TabIndex = 3;
+            this.rb_Tintura.TabStop = true;
+            this.rb_Tintura.Text = "Tintura";
+            this.rb_Tintura.UseVisualStyleBackColor = true;
+            // 
+            // rb_Crema
+            // 
+            this.rb_Crema.AutoSize = true;
+            this.rb_Crema.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Crema.Location = new System.Drawing.Point(41, 68);
+            this.rb_Crema.Name = "rb_Crema";
+            this.rb_Crema.Size = new System.Drawing.Size(84, 28);
+            this.rb_Crema.TabIndex = 2;
+            this.rb_Crema.TabStop = true;
+            this.rb_Crema.Text = "Crema";
+            this.rb_Crema.UseVisualStyleBackColor = true;
+            // 
+            // rb_Lavado
+            // 
+            this.rb_Lavado.AutoSize = true;
+            this.rb_Lavado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Lavado.Location = new System.Drawing.Point(201, 20);
+            this.rb_Lavado.Name = "rb_Lavado";
+            this.rb_Lavado.Size = new System.Drawing.Size(89, 28);
+            this.rb_Lavado.TabIndex = 1;
+            this.rb_Lavado.TabStop = true;
+            this.rb_Lavado.Text = "Lavado";
+            this.rb_Lavado.UseVisualStyleBackColor = true;
+            // 
+            // rb_Corte
+            // 
+            this.rb_Corte.AutoSize = true;
+            this.rb_Corte.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Corte.Location = new System.Drawing.Point(41, 20);
+            this.rb_Corte.Name = "rb_Corte";
+            this.rb_Corte.Size = new System.Drawing.Size(73, 28);
+            this.rb_Corte.TabIndex = 0;
+            this.rb_Corte.TabStop = true;
+            this.rb_Corte.Text = "Corte";
+            this.rb_Corte.UseVisualStyleBackColor = true;
+            // 
+            // dgv
+            // 
+            this.dgv.AllowUserToAddRows = false;
+            this.dgv.AllowUserToDeleteRows = false;
+            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id_Hs,
+            this.FechaHora,
+            this.IdPeluquero,
+            this.Peluquero});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv.Location = new System.Drawing.Point(569, 104);
+            this.dgv.Name = "dgv";
+            this.dgv.ReadOnly = true;
+            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv.Size = new System.Drawing.Size(375, 242);
+            this.dgv.TabIndex = 16;
+            // 
+            // txt_Peluquero
+            // 
+            this.txt_Peluquero.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Peluquero.Location = new System.Drawing.Point(95, 104);
+            this.txt_Peluquero.Name = "txt_Peluquero";
+            this.txt_Peluquero.Size = new System.Drawing.Size(277, 29);
+            this.txt_Peluquero.TabIndex = 17;
+            this.txt_Peluquero.TextChanged += new System.EventHandler(this.txt_Peluquero_TextChanged);
+            // 
+            // Id_Hs
+            // 
+            this.Id_Hs.HeaderText = "Id_Hs";
+            this.Id_Hs.Name = "Id_Hs";
+            this.Id_Hs.ReadOnly = true;
+            this.Id_Hs.Visible = false;
+            // 
+            // FechaHora
+            // 
+            this.FechaHora.HeaderText = "FechaHora";
+            this.FechaHora.Name = "FechaHora";
+            this.FechaHora.ReadOnly = true;
+            // 
+            // IdPeluquero
+            // 
+            this.IdPeluquero.HeaderText = "IdPeluquero";
+            this.IdPeluquero.Name = "IdPeluquero";
+            this.IdPeluquero.ReadOnly = true;
+            this.IdPeluquero.Visible = false;
+            // 
+            // Peluquero
+            // 
+            this.Peluquero.HeaderText = "Peluquero";
+            this.Peluquero.Name = "Peluquero";
+            this.Peluquero.ReadOnly = true;
             // 
             // Turno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(692, 473);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.checkedListBoxTarea);
+            this.ClientSize = new System.Drawing.Size(985, 473);
+            this.Controls.Add(this.txt_Peluquero);
+            this.Controls.Add(this.dgv);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnContinuar);
             this.Controls.Add(this.lblDateTime);
-            this.Controls.Add(this.listBoxPelluqueros);
             this.Controls.Add(this.lblPeluquero);
             this.Name = "Turno";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Turno";
-            this.Load += new System.EventHandler(this.Turno_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,12 +266,20 @@
         #endregion
 
         private System.Windows.Forms.Label lblPeluquero;
-        private System.Windows.Forms.ListBox listBoxPelluqueros;
         private System.Windows.Forms.Label lblDateTime;
         private System.Windows.Forms.Button btnContinuar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckedListBox checkedListBoxTarea;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rb_Tintura;
+        private System.Windows.Forms.RadioButton rb_Crema;
+        private System.Windows.Forms.RadioButton rb_Lavado;
+        private System.Windows.Forms.RadioButton rb_Corte;
+        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.TextBox txt_Peluquero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Hs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaHora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdPeluquero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Peluquero;
     }
 }
