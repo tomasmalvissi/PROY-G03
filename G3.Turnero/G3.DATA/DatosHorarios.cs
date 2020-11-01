@@ -27,7 +27,7 @@ namespace G3.DATA
 
                 case "Modificar":
                     orden = "update Horarios set "
-                                        + "DateTime= '" + horarios.DiaHora + "',"
+                                        + "DiaHora = '" + horarios.DiaHora + "',"
                                         + "PeluqueroId= '" + horarios.PeluqueroId + "'"
                                         + "where Id= " + horarios.Id;
                     break;

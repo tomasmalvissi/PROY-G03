@@ -18,6 +18,7 @@ namespace G3.WF.PELUQUERO
         DatosTurnos dt = new DatosTurnos();
         G3.CLASS.Turno t = new CLASS.Turno();
         DatosHorarios dh = new DatosHorarios();
+        G3.CLASS.Horario h = new CLASS.Horario();
         public Panel(string dni)
         {
             InitializeComponent();
@@ -92,6 +93,25 @@ namespace G3.WF.PELUQUERO
             picker_turno.Value = Convert.ToDateTime(dgv_Turnos.CurrentRow.Cells[1].Value.ToString());
             txt_ClienteId.Text = dgv_Turnos.CurrentRow.Cells[3].Value.ToString();
         }
+
+        public void ABMHorario(string accion)
+        {
+            h.Id = Convert.ToInt32(lbl_id_horario.Text);
+            h.DiaHora = picker_horario.Value;
+            h.PeluqueroId = Convert.ToInt32(DNI);
+            switch (accion)
+            {
+                case "Alta":
+                    dh.ABMHorarios("Alta", h);
+                    break;
+                case "Modificar":
+                    dh.ABMHorarios("Modificar", h);
+                    break;
+                case "Eliminar":
+                    dh.ABMHorarios("Eliminar", h);
+                    break;
+            }
+        }
         #endregion
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -109,6 +129,24 @@ namespace G3.WF.PELUQUERO
         private void dgv_Turnos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             GridToTurnos();
+        }
+
+        private void btn_alta_horario_Click(object sender, EventArgs e)
+        {
+            ABMHorario("Alta");
+            CargaDgHorarios();
+        }
+
+        private void btn_modifica_horario_Click(object sender, EventArgs e)
+        {
+            ABMHorario("Modificar");
+            CargaDgHorarios();
+        }
+
+        private void btn_eliminar_horario_Click(object sender, EventArgs e)
+        {
+            ABMHorario("Eliminar");
+            CargaDgHorarios();
         }
     }
 }
