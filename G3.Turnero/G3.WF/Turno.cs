@@ -61,7 +61,9 @@ namespace G3.WF
                 t.TareaId = 4;
             }
 
-            t.DateTime = Convert.ToDateTime(dgv.CurrentRow.Cells[1].Value.ToString());
+            
+            var date = Convert.ToDateTime(dgv.CurrentRow.Cells[1].EditedFormattedValue);
+            t.DateTime = date;
             t.PeluqueroId = Convert.ToInt32(dgv.CurrentRow.Cells[2].Value.ToString());
             t.ClienteId = Convert.ToInt32(DNI);
 
