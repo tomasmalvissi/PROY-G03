@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G3.CLASS", "G3.CLASS\G3.CLA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G3.DATA", "G3.DATA\G3.DATA.csproj", "{6C7D1D1C-0D8C-44A4-9E47-EBE4288890B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G3.WF.PELUQUERO", "G3.WF.PELUQUERO\G3.WF.PELUQUERO.csproj", "{C0F11239-A253-477E-B5C5-21B06B144F7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6C7D1D1C-0D8C-44A4-9E47-EBE4288890B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C7D1D1C-0D8C-44A4-9E47-EBE4288890B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C7D1D1C-0D8C-44A4-9E47-EBE4288890B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0F11239-A253-477E-B5C5-21B06B144F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0F11239-A253-477E-B5C5-21B06B144F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0F11239-A253-477E-B5C5-21B06B144F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0F11239-A253-477E-B5C5-21B06B144F7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
