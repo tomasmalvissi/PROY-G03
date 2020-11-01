@@ -61,14 +61,15 @@ namespace G3.DATA
             string orden = string.Empty;
             orden = "select h.Id, h.DiaHora, p.Id, p.Nombre " +
                 "from Horarios h, Peluqueros p " +
-                "where p.Id = h.PeluqueroId and p.Nombre like " + "'%" + cual + "%';";
+                "where p.Id = h.PeluqueroId and p.Nombre like " + "'%" + cual + "%'"
+                +" and h.DiaHora BETWEEN getdate() AND dateadd(month," + +2 + ", getdate())" ;
 
             SqlCommand sqlcmd = new SqlCommand(orden, conexion);
             DataSet ds = new DataSet();
             SqlDataAdapter da = new SqlDataAdapter();
 
             try
-            {
+            {   
                 AbrirConex();
                 sqlcmd.ExecuteNonQuery();
                 da.SelectCommand = sqlcmd;

@@ -18,15 +18,6 @@ namespace G3.DATA
 
             switch (accion)
             {
-                case "Alta":
-                    orden = "insert into Turnos " + "values ("
-                                            + "'" + turnos.DateTime + "',"
-                                            + "'" + turnos.TareaId + "',"
-                                            + "'" + turnos.ClienteId + "',"
-                                            + "'" + turnos.PeluqueroId + "'"
-                                            + ");";
-                    break;
-
                 case "Modificar":
                     orden = "update Turnos set "
                                         + "DateTime= '" + turnos.DateTime + "',"
@@ -40,6 +31,39 @@ namespace G3.DATA
                     orden = "Delete from Turnos where Id = " + turnos.Id;
                     break;
             }
+
+            SqlCommand sqlcmd = new SqlCommand(orden, conexion);
+            try
+            {
+                AbrirConex();
+                resultado = sqlcmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception("Error al tratar de modificar los registros de Turnos", e);
+            }
+            finally
+            {
+                CerrarConex();
+                sqlcmd.Dispose();
+            }
+            return resultado;
+        }
+
+        public int AltaTurnos(Turno turnos, int horario)
+        {
+            int resultado = 0;
+            string orden = string.Empty;
+
+            orden = "insert into Turnos " + "values ("
+                     + "'" + turnos.DateTime + "',"
+                     + "'" + turnos.TareaId + "',"
+                     + "'" + turnos.ClienteId + "',"
+                     + "'" + turnos.PeluqueroId + "');"
+                     + " delete from Horarios where Id =" + horario
+                     + ";";
+
 
             SqlCommand sqlcmd = new SqlCommand(orden, conexion);
             try

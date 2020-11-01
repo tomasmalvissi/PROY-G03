@@ -123,9 +123,6 @@ namespace G3.WF.PELUQUERO
 
             switch (accion)
             {
-                case "Alta":
-                    dt.ABMTurnos("Alta", t);
-                    break;
                 case "Modificar":
                     dt.ABMTurnos("Modificar", t);
                     break;
