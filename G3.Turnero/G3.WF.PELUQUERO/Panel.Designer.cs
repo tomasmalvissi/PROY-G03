@@ -29,20 +29,15 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblDateTime = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.dgv_Horarios = new System.Windows.Forms.DataGridView();
-            this.Id_Hs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTurno = new System.Windows.Forms.Label();
             this.dgv_Turnos = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TareaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClienteId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_ClienteId = new System.Windows.Forms.TextBox();
             this.combo_TareaId = new System.Windows.Forms.ComboBox();
             this.picker = new System.Windows.Forms.DateTimePicker();
@@ -55,6 +50,12 @@
             this.btn_eliminar_horario = new System.Windows.Forms.Button();
             this.btn_modifica_horario = new System.Windows.Forms.Button();
             this.btn_alta_horario = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TareaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClienteId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_Hs = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Horarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Turnos)).BeginInit();
             this.SuspendLayout();
@@ -98,7 +99,6 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.Format = "f";
             dataGridViewCellStyle2.NullValue = null;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -110,22 +110,6 @@
             this.dgv_Horarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Horarios.Size = new System.Drawing.Size(350, 248);
             this.dgv_Horarios.TabIndex = 16;
-            // 
-            // Id_Hs
-            // 
-            this.Id_Hs.HeaderText = "Id_Hs";
-            this.Id_Hs.Name = "Id_Hs";
-            this.Id_Hs.ReadOnly = true;
-            this.Id_Hs.Width = 60;
-            // 
-            // FechaHora
-            // 
-            dataGridViewCellStyle1.NullValue = null;
-            this.FechaHora.DefaultCellStyle = dataGridViewCellStyle1;
-            this.FechaHora.HeaderText = "FechaHora";
-            this.FechaHora.Name = "FechaHora";
-            this.FechaHora.ReadOnly = true;
-            this.FechaHora.Width = 85;
             // 
             // lblTurno
             // 
@@ -152,57 +136,26 @@
             this.dataGridViewTextBoxColumn2,
             this.TareaId,
             this.ClienteId});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.Format = "f";
-            dataGridViewCellStyle4.NullValue = null;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Turnos.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.NullValue = null;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Turnos.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_Turnos.Location = new System.Drawing.Point(43, 138);
             this.dgv_Turnos.Name = "dgv_Turnos";
             this.dgv_Turnos.ReadOnly = true;
             this.dgv_Turnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Turnos.Size = new System.Drawing.Size(414, 248);
+            this.dgv_Turnos.Size = new System.Drawing.Size(446, 248);
             this.dgv_Turnos.TabIndex = 18;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 41;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewCellStyle3.NullValue = null;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTextBoxColumn2.HeaderText = "FechaHora";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 85;
-            // 
-            // TareaId
-            // 
-            this.TareaId.HeaderText = "TareaId";
-            this.TareaId.Name = "TareaId";
-            this.TareaId.ReadOnly = true;
-            this.TareaId.Width = 69;
-            // 
-            // ClienteId
-            // 
-            this.ClienteId.HeaderText = "ClienteId";
-            this.ClienteId.Name = "ClienteId";
-            this.ClienteId.ReadOnly = true;
-            this.ClienteId.Width = 73;
             // 
             // txt_ClienteId
             // 
             this.txt_ClienteId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ClienteId.Location = new System.Drawing.Point(355, 100);
+            this.txt_ClienteId.Location = new System.Drawing.Point(369, 100);
             this.txt_ClienteId.Name = "txt_ClienteId";
             this.txt_ClienteId.Size = new System.Drawing.Size(100, 21);
             this.txt_ClienteId.TabIndex = 19;
@@ -216,7 +169,7 @@
             "2-Baño de crema",
             "3-Lavado",
             "4-Tintura"});
-            this.combo_TareaId.Location = new System.Drawing.Point(210, 98);
+            this.combo_TareaId.Location = new System.Drawing.Point(224, 98);
             this.combo_TareaId.Name = "combo_TareaId";
             this.combo_TareaId.Size = new System.Drawing.Size(110, 23);
             this.combo_TareaId.TabIndex = 20;
@@ -243,7 +196,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(207, 80);
+            this.label2.Location = new System.Drawing.Point(221, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 15);
             this.label2.TabIndex = 23;
@@ -253,7 +206,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(352, 82);
+            this.label3.Location = new System.Drawing.Point(366, 82);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 15);
             this.label3.TabIndex = 24;
@@ -271,7 +224,7 @@
             // 
             this.btn_modifica_turno.BackColor = System.Drawing.Color.Honeydew;
             this.btn_modifica_turno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modifica_turno.Location = new System.Drawing.Point(210, 41);
+            this.btn_modifica_turno.Location = new System.Drawing.Point(224, 41);
             this.btn_modifica_turno.Name = "btn_modifica_turno";
             this.btn_modifica_turno.Size = new System.Drawing.Size(100, 32);
             this.btn_modifica_turno.TabIndex = 26;
@@ -282,7 +235,7 @@
             // 
             this.btn_eliminar_turno.BackColor = System.Drawing.Color.Honeydew;
             this.btn_eliminar_turno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_eliminar_turno.Location = new System.Drawing.Point(355, 41);
+            this.btn_eliminar_turno.Location = new System.Drawing.Point(369, 41);
             this.btn_eliminar_turno.Name = "btn_eliminar_turno";
             this.btn_eliminar_turno.Size = new System.Drawing.Size(100, 32);
             this.btn_eliminar_turno.TabIndex = 27;
@@ -322,6 +275,55 @@
             this.btn_alta_horario.Text = "Alta";
             this.btn_alta_horario.UseVisualStyleBackColor = false;
             // 
+            // Id
+            // 
+            dataGridViewCellStyle3.NullValue = null;
+            this.Id.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 41;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewCellStyle4.NullValue = null;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewTextBoxColumn2.HeaderText = "FechaHora";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 85;
+            // 
+            // TareaId
+            // 
+            this.TareaId.HeaderText = "TareaId";
+            this.TareaId.Name = "TareaId";
+            this.TareaId.ReadOnly = true;
+            this.TareaId.Width = 69;
+            // 
+            // ClienteId
+            // 
+            this.ClienteId.HeaderText = "ClienteId";
+            this.ClienteId.Name = "ClienteId";
+            this.ClienteId.ReadOnly = true;
+            this.ClienteId.Width = 73;
+            // 
+            // Id_Hs
+            // 
+            this.Id_Hs.HeaderText = "Id_Hs";
+            this.Id_Hs.Name = "Id_Hs";
+            this.Id_Hs.ReadOnly = true;
+            this.Id_Hs.Width = 60;
+            // 
+            // FechaHora
+            // 
+            dataGridViewCellStyle1.Format = "f";
+            dataGridViewCellStyle1.NullValue = null;
+            this.FechaHora.DefaultCellStyle = dataGridViewCellStyle1;
+            this.FechaHora.HeaderText = "FechaHora";
+            this.FechaHora.Name = "FechaHora";
+            this.FechaHora.ReadOnly = true;
+            this.FechaHora.Width = 85;
+            // 
             // Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -360,14 +362,8 @@
         private System.Windows.Forms.Label lblDateTime;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DataGridView dgv_Horarios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Hs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaHora;
         private System.Windows.Forms.Label lblTurno;
         private System.Windows.Forms.DataGridView dgv_Turnos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TareaId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteId;
         private System.Windows.Forms.TextBox txt_ClienteId;
         private System.Windows.Forms.ComboBox combo_TareaId;
         private System.Windows.Forms.DateTimePicker picker;
@@ -380,5 +376,11 @@
         private System.Windows.Forms.Button btn_eliminar_horario;
         private System.Windows.Forms.Button btn_modifica_horario;
         private System.Windows.Forms.Button btn_alta_horario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Hs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaHora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TareaId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteId;
     }
 }

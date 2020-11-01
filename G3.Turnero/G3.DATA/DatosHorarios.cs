@@ -85,5 +85,36 @@ namespace G3.DATA
             }
             return ds;
         }
+
+        public DataSet MostrarHorarioPorDni(string cual)
+        {
+            string orden = string.Empty;
+            orden = "select h.Id, h.DiaHora " +
+                   " from Horarios h, Peluqueros p " +
+                   " where p.Id = h.PeluqueroId and p.Id = " + int.Parse(cual) + 
+                   " and h.DiaHora BETWEEN getdate() AND dateadd(month," + +2 + ", getdate()); ";
+
+            SqlCommand sqlcmd = new SqlCommand(orden, conexion);
+            DataSet ds = new DataSet();
+            SqlDataAdapter da = new SqlDataAdapter();
+
+            try
+            {
+                AbrirConex();
+                sqlcmd.ExecuteNonQuery();
+                da.SelectCommand = sqlcmd;
+                da.Fill(ds);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("error al listar Turnos", e);
+            }
+            finally
+            {
+                CerrarConex();
+                sqlcmd.Dispose();
+            }
+            return ds;
+        }
     }
 }

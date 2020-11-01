@@ -48,9 +48,9 @@ namespace G3.WF.PELUQUERO
             }
             if (valor != "")
             {
-                //Turno t = new Turno(dni);
-                //this.Hide();
-                //t.Show();
+                Panel p = new Panel(dni);
+                this.Hide();
+                p.Show();
             }
         }
 
@@ -95,9 +95,9 @@ namespace G3.WF.PELUQUERO
 
             if (flag == 2)
             {
-                //Turno t = new Turno(dni);
-                //this.Hide();
-                //t.Show();
+                Panel p = new Panel(dni);
+                this.Hide();
+                p.Show();
 
                 flag = 0;
             }

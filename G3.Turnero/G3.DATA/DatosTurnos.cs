@@ -60,13 +60,15 @@ namespace G3.DATA
             return resultado;
         }
 
-        public DataSet MostrarTurnos(string cual)
+        public DataSet MostrarTurnosporPeluquero(string cual)
         {
             string orden = string.Empty;
             if (cual != "Todos")
-                orden = "select * from Turnos where Id = " + int.Parse(cual) + ";";
+                orden = "select Id, DateTime, TareaId, ClienteId " +
+                    " from Turnos where PeluqueroId = " + int.Parse(cual) +
+                    " and DateTime BETWEEN getdate() AND dateadd(month," + +2 + ", getdate()); ";
             else
-                orden = "select * from Turnos;";
+                orden = "select select Id, DateTime, TareaId, ClienteId from Turnos;";
 
             SqlCommand sqlcmd = new SqlCommand(orden, conexion);
             DataSet ds = new DataSet();

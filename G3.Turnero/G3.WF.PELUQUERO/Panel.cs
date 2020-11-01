@@ -22,27 +22,40 @@ namespace G3.WF.PELUQUERO
         {
             InitializeComponent();
 
-            CargaDgv();
-
             this.DNI = dni;
+
+            CargaDgHorarios();
+            CargaDgTurnos();        
         }
 
         #region METODOS
-        public void CargaDgv()
+        public void CargaDgHorarios()
         {
             dgv_Horarios.Rows.Clear();
             DataSet ds = new DataSet();
-            //ds = dh.MostrarHorarios(txt_Peluquero.Text);
+            ds = dh.MostrarHorarioPorDni(DNI);
             if(ds.Tables[0].Rows.Count > 0)
             {
                 foreach(DataRow dr in ds.Tables[0].Rows)
                 {
-                    dgv_Horarios.Rows.Add(dr[0], dr[1], dr[2], dr[3]);
+                    dgv_Horarios.Rows.Add(dr[0], dr[1]);
                 }
             }
-
         }
 
+        public void CargaDgTurnos()
+        {
+            dgv_Turnos.Rows.Clear();
+            DataSet ds = new DataSet();
+            ds = dt.MostrarTurnosporPeluquero(DNI);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    dgv_Turnos.Rows.Add(dr[0], dr[1], dr[2], dr[3]);
+                }
+            }
+        }
         #endregion
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -59,7 +72,7 @@ namespace G3.WF.PELUQUERO
 
         private void txt_Peluquero_TextChanged(object sender, EventArgs e)
         {
-            CargaDgv();
+
         }
     }
 }
