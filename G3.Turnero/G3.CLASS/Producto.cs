@@ -11,8 +11,7 @@ namespace G3.CLASS
     [Table("Productos")]
     public class Producto
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         [Required]
         public string Descripcion { get; set; }

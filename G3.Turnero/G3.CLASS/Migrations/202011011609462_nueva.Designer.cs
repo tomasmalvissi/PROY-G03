@@ -7,13 +7,13 @@ namespace G3.CLASS.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class _new : IMigrationMetadata
+    public sealed partial class nueva : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(_new));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(nueva));
         
         string IMigrationMetadata.Id
         {
-            get { return "202010311732455_new"; }
+            get { return "202011011609462_nueva"; }
         }
         
         string IMigrationMetadata.Source
