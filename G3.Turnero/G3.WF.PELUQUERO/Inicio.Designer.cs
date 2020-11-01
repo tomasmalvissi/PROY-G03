@@ -36,10 +36,10 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblEspejo = new System.Windows.Forms.Label();
             this.gr_espejo = new System.Windows.Forms.GroupBox();
-            this.rb1 = new System.Windows.Forms.RadioButton();
-            this.rb2 = new System.Windows.Forms.RadioButton();
-            this.rb3 = new System.Windows.Forms.RadioButton();
             this.rb4 = new System.Windows.Forms.RadioButton();
+            this.rb3 = new System.Windows.Forms.RadioButton();
+            this.rb2 = new System.Windows.Forms.RadioButton();
+            this.rb1 = new System.Windows.Forms.RadioButton();
             this.gr_espejo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -146,29 +146,17 @@
             this.gr_espejo.Text = "Espejo";
             this.gr_espejo.Visible = false;
             // 
-            // rb1
+            // rb4
             // 
-            this.rb1.AutoSize = true;
-            this.rb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb1.Location = new System.Drawing.Point(19, 13);
-            this.rb1.Name = "rb1";
-            this.rb1.Size = new System.Drawing.Size(102, 28);
-            this.rb1.TabIndex = 8;
-            this.rb1.TabStop = true;
-            this.rb1.Text = "Espejo 1";
-            this.rb1.UseVisualStyleBackColor = true;
-            // 
-            // rb2
-            // 
-            this.rb2.AutoSize = true;
-            this.rb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb2.Location = new System.Drawing.Point(127, 13);
-            this.rb2.Name = "rb2";
-            this.rb2.Size = new System.Drawing.Size(102, 28);
-            this.rb2.TabIndex = 9;
-            this.rb2.TabStop = true;
-            this.rb2.Text = "Espejo 2";
-            this.rb2.UseVisualStyleBackColor = true;
+            this.rb4.AutoSize = true;
+            this.rb4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb4.Location = new System.Drawing.Point(365, 13);
+            this.rb4.Name = "rb4";
+            this.rb4.Size = new System.Drawing.Size(102, 28);
+            this.rb4.TabIndex = 11;
+            this.rb4.TabStop = true;
+            this.rb4.Text = "Espejo 4";
+            this.rb4.UseVisualStyleBackColor = true;
             // 
             // rb3
             // 
@@ -182,17 +170,29 @@
             this.rb3.Text = "Espejo 3";
             this.rb3.UseVisualStyleBackColor = true;
             // 
-            // rb4
+            // rb2
             // 
-            this.rb4.AutoSize = true;
-            this.rb4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb4.Location = new System.Drawing.Point(365, 13);
-            this.rb4.Name = "rb4";
-            this.rb4.Size = new System.Drawing.Size(102, 28);
-            this.rb4.TabIndex = 11;
-            this.rb4.TabStop = true;
-            this.rb4.Text = "Espejo 4";
-            this.rb4.UseVisualStyleBackColor = true;
+            this.rb2.AutoSize = true;
+            this.rb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb2.Location = new System.Drawing.Point(127, 13);
+            this.rb2.Name = "rb2";
+            this.rb2.Size = new System.Drawing.Size(102, 28);
+            this.rb2.TabIndex = 9;
+            this.rb2.TabStop = true;
+            this.rb2.Text = "Espejo 2";
+            this.rb2.UseVisualStyleBackColor = true;
+            // 
+            // rb1
+            // 
+            this.rb1.AutoSize = true;
+            this.rb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb1.Location = new System.Drawing.Point(19, 13);
+            this.rb1.Name = "rb1";
+            this.rb1.Size = new System.Drawing.Size(102, 28);
+            this.rb1.TabIndex = 8;
+            this.rb1.TabStop = true;
+            this.rb1.Text = "Espejo 1";
+            this.rb1.UseVisualStyleBackColor = true;
             // 
             // Inicio
             // 
@@ -211,7 +211,7 @@
             this.Name = "Inicio";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Turnero";
+            this.Text = "Inicio";
             this.gr_espejo.ResumeLayout(false);
             this.gr_espejo.PerformLayout();
             this.ResumeLayout(false);
