@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblDateTime = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.dgv_Horarios = new System.Windows.Forms.DataGridView();
@@ -68,12 +72,12 @@
             // 
             this.lblDateTime.AutoSize = true;
             this.lblDateTime.BackColor = System.Drawing.Color.PapayaWhip;
-            this.lblDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateTime.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateTime.ForeColor = System.Drawing.SystemColors.InfoText;
             this.lblDateTime.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblDateTime.Location = new System.Drawing.Point(538, 34);
             this.lblDateTime.Name = "lblDateTime";
-            this.lblDateTime.Size = new System.Drawing.Size(139, 37);
+            this.lblDateTime.Size = new System.Drawing.Size(142, 39);
             this.lblDateTime.TabIndex = 8;
             this.lblDateTime.Text = "Horarios";
             this.lblDateTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -81,7 +85,7 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Honeydew;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(415, 421);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(146, 44);
@@ -95,22 +99,39 @@
             this.dgv_Horarios.AllowUserToAddRows = false;
             this.dgv_Horarios.AllowUserToDeleteRows = false;
             this.dgv_Horarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgv_Horarios.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Horarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Horarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Horarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id_Hs,
             this.FechaHora});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.NullValue = null;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Horarios.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.NullValue = null;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Horarios.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Horarios.Location = new System.Drawing.Point(545, 138);
             this.dgv_Horarios.Name = "dgv_Horarios";
             this.dgv_Horarios.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Horarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Horarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Horarios.Size = new System.Drawing.Size(350, 248);
             this.dgv_Horarios.TabIndex = 16;
@@ -121,28 +142,28 @@
             this.Id_Hs.HeaderText = "Id_Hs";
             this.Id_Hs.Name = "Id_Hs";
             this.Id_Hs.ReadOnly = true;
-            this.Id_Hs.Width = 60;
+            this.Id_Hs.Width = 62;
             // 
             // FechaHora
             // 
-            dataGridViewCellStyle11.Format = "f";
-            dataGridViewCellStyle11.NullValue = null;
-            this.FechaHora.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Format = "f";
+            dataGridViewCellStyle2.NullValue = null;
+            this.FechaHora.DefaultCellStyle = dataGridViewCellStyle2;
             this.FechaHora.HeaderText = "FechaHora";
             this.FechaHora.Name = "FechaHora";
             this.FechaHora.ReadOnly = true;
-            this.FechaHora.Width = 85;
+            this.FechaHora.Width = 93;
             // 
             // lblTurno
             // 
             this.lblTurno.AutoSize = true;
             this.lblTurno.BackColor = System.Drawing.Color.PapayaWhip;
-            this.lblTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTurno.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTurno.ForeColor = System.Drawing.SystemColors.InfoText;
             this.lblTurno.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblTurno.Location = new System.Drawing.Point(36, 36);
             this.lblTurno.Name = "lblTurno";
-            this.lblTurno.Size = new System.Drawing.Size(118, 37);
+            this.lblTurno.Size = new System.Drawing.Size(112, 39);
             this.lblTurno.TabIndex = 17;
             this.lblTurno.Text = "Turnos";
             this.lblTurno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -152,24 +173,41 @@
             this.dgv_Turnos.AllowUserToAddRows = false;
             this.dgv_Turnos.AllowUserToDeleteRows = false;
             this.dgv_Turnos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgv_Turnos.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Turnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_Turnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Turnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.dataGridViewTextBoxColumn2,
             this.TareaId,
             this.ClienteId});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.NullValue = null;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Turnos.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.NullValue = null;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Turnos.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_Turnos.Location = new System.Drawing.Point(43, 138);
             this.dgv_Turnos.Name = "dgv_Turnos";
             this.dgv_Turnos.ReadOnly = true;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Turnos.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_Turnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Turnos.Size = new System.Drawing.Size(446, 248);
             this.dgv_Turnos.TabIndex = 18;
@@ -177,39 +215,39 @@
             // 
             // Id
             // 
-            dataGridViewCellStyle13.NullValue = null;
-            this.Id.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle6.NullValue = null;
+            this.Id.DefaultCellStyle = dataGridViewCellStyle6;
             this.Id.HeaderText = "Id";
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
-            this.Id.Width = 41;
+            this.Id.Width = 44;
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewCellStyle14.NullValue = null;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle7.NullValue = null;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewTextBoxColumn2.HeaderText = "FechaHora";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 85;
+            this.dataGridViewTextBoxColumn2.Width = 93;
             // 
             // TareaId
             // 
             this.TareaId.HeaderText = "TareaId";
             this.TareaId.Name = "TareaId";
             this.TareaId.ReadOnly = true;
-            this.TareaId.Width = 69;
+            this.TareaId.Width = 75;
             // 
             // ClienteId
             // 
             this.ClienteId.HeaderText = "ClienteId";
             this.ClienteId.Name = "ClienteId";
             this.ClienteId.ReadOnly = true;
-            this.ClienteId.Width = 73;
+            this.ClienteId.Width = 82;
             // 
             // combo_TareaId
             // 
-            this.combo_TareaId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_TareaId.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combo_TareaId.FormattingEnabled = true;
             this.combo_TareaId.Items.AddRange(new object[] {
             "1-Corte",
@@ -218,15 +256,16 @@
             "4-Tintura"});
             this.combo_TareaId.Location = new System.Drawing.Point(224, 98);
             this.combo_TareaId.Name = "combo_TareaId";
-            this.combo_TareaId.Size = new System.Drawing.Size(110, 23);
+            this.combo_TareaId.Size = new System.Drawing.Size(110, 25);
             this.combo_TareaId.TabIndex = 20;
             // 
             // picker_turno
             // 
-            this.picker_turno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picker_turno.CalendarFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picker_turno.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.picker_turno.Location = new System.Drawing.Point(43, 100);
             this.picker_turno.Name = "picker_turno";
-            this.picker_turno.Size = new System.Drawing.Size(143, 21);
+            this.picker_turno.Size = new System.Drawing.Size(143, 22);
             this.picker_turno.TabIndex = 21;
             // 
             // label1
@@ -261,16 +300,16 @@
             // 
             // picker_horario
             // 
-            this.picker_horario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picker_horario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.picker_horario.Location = new System.Drawing.Point(545, 98);
             this.picker_horario.Name = "picker_horario";
-            this.picker_horario.Size = new System.Drawing.Size(350, 21);
+            this.picker_horario.Size = new System.Drawing.Size(350, 22);
             this.picker_horario.TabIndex = 25;
             // 
             // btn_modifica_turno
             // 
             this.btn_modifica_turno.BackColor = System.Drawing.Color.Honeydew;
-            this.btn_modifica_turno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_modifica_turno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_modifica_turno.Location = new System.Drawing.Point(224, 41);
             this.btn_modifica_turno.Name = "btn_modifica_turno";
             this.btn_modifica_turno.Size = new System.Drawing.Size(100, 32);
@@ -282,7 +321,7 @@
             // btn_eliminar_turno
             // 
             this.btn_eliminar_turno.BackColor = System.Drawing.Color.Honeydew;
-            this.btn_eliminar_turno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar_turno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_eliminar_turno.Location = new System.Drawing.Point(369, 41);
             this.btn_eliminar_turno.Name = "btn_eliminar_turno";
             this.btn_eliminar_turno.Size = new System.Drawing.Size(100, 32);
@@ -294,7 +333,7 @@
             // btn_eliminar_horario
             // 
             this.btn_eliminar_horario.BackColor = System.Drawing.Color.Honeydew;
-            this.btn_eliminar_horario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar_horario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_eliminar_horario.Location = new System.Drawing.Point(811, 60);
             this.btn_eliminar_horario.Name = "btn_eliminar_horario";
             this.btn_eliminar_horario.Size = new System.Drawing.Size(84, 32);
@@ -306,10 +345,10 @@
             // btn_modifica_horario
             // 
             this.btn_modifica_horario.BackColor = System.Drawing.Color.Honeydew;
-            this.btn_modifica_horario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_modifica_horario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_modifica_horario.Location = new System.Drawing.Point(705, 60);
             this.btn_modifica_horario.Name = "btn_modifica_horario";
-            this.btn_modifica_horario.Size = new System.Drawing.Size(87, 32);
+            this.btn_modifica_horario.Size = new System.Drawing.Size(100, 32);
             this.btn_modifica_horario.TabIndex = 28;
             this.btn_modifica_horario.Text = "Modificar";
             this.btn_modifica_horario.UseVisualStyleBackColor = false;
@@ -318,7 +357,7 @@
             // btn_alta_horario
             // 
             this.btn_alta_horario.BackColor = System.Drawing.Color.Honeydew;
-            this.btn_alta_horario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_alta_horario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_alta_horario.Location = new System.Drawing.Point(705, 22);
             this.btn_alta_horario.Name = "btn_alta_horario";
             this.btn_alta_horario.Size = new System.Drawing.Size(190, 32);
@@ -381,7 +420,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(946, 492);
             this.Controls.Add(this.lblClienteId);
             this.Controls.Add(this.lbl_id_horario);

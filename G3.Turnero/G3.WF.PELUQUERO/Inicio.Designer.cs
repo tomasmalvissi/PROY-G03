@@ -47,22 +47,22 @@
             // 
             this.lblBienvenido.AutoSize = true;
             this.lblBienvenido.BackColor = System.Drawing.Color.LavenderBlush;
-            this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenido.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBienvenido.ForeColor = System.Drawing.SystemColors.InfoText;
             this.lblBienvenido.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblBienvenido.Location = new System.Drawing.Point(207, 9);
             this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(288, 55);
+            this.lblBienvenido.Size = new System.Drawing.Size(311, 58);
             this.lblBienvenido.TabIndex = 0;
             this.lblBienvenido.Text = "¡Bienvenido!";
             this.lblBienvenido.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtDNI
             // 
-            this.txtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDNI.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDNI.Location = new System.Drawing.Point(124, 137);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(444, 62);
+            this.txtDNI.Size = new System.Drawing.Size(444, 66);
             this.txtDNI.TabIndex = 1;
             this.txtDNI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -70,12 +70,12 @@
             // 
             this.lblDNI.AutoSize = true;
             this.lblDNI.BackColor = System.Drawing.Color.PapayaWhip;
-            this.lblDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDNI.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDNI.ForeColor = System.Drawing.SystemColors.InfoText;
             this.lblDNI.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblDNI.Location = new System.Drawing.Point(210, 92);
+            this.lblDNI.Location = new System.Drawing.Point(210, 91);
             this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(265, 42);
+            this.lblDNI.Size = new System.Drawing.Size(273, 44);
             this.lblDNI.TabIndex = 4;
             this.lblDNI.Text = "Ingrese su DNI";
             this.lblDNI.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -83,7 +83,7 @@
             // btnContinuar
             // 
             this.btnContinuar.BackColor = System.Drawing.Color.Honeydew;
-            this.btnContinuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContinuar.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContinuar.Location = new System.Drawing.Point(245, 446);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(195, 55);
@@ -94,10 +94,10 @@
             // 
             // txt_Nombre
             // 
-            this.txt_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Nombre.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Nombre.Location = new System.Drawing.Point(128, 265);
             this.txt_Nombre.Name = "txt_Nombre";
-            this.txt_Nombre.Size = new System.Drawing.Size(444, 62);
+            this.txt_Nombre.Size = new System.Drawing.Size(444, 66);
             this.txt_Nombre.TabIndex = 2;
             this.txt_Nombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_Nombre.Visible = false;
@@ -106,12 +106,12 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.Color.PapayaWhip;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.InfoText;
             this.lblNombre.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblNombre.Location = new System.Drawing.Point(98, 220);
+            this.lblNombre.Location = new System.Drawing.Point(98, 219);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(506, 42);
+            this.lblNombre.Size = new System.Drawing.Size(539, 44);
             this.lblNombre.TabIndex = 5;
             this.lblNombre.Text = "Ingrese su Nombre y Apellido";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -121,12 +121,12 @@
             // 
             this.lblEspejo.AutoSize = true;
             this.lblEspejo.BackColor = System.Drawing.Color.PapayaWhip;
-            this.lblEspejo.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEspejo.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEspejo.ForeColor = System.Drawing.SystemColors.InfoText;
             this.lblEspejo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblEspejo.Location = new System.Drawing.Point(158, 344);
+            this.lblEspejo.Location = new System.Drawing.Point(158, 343);
             this.lblEspejo.Name = "lblEspejo";
-            this.lblEspejo.Size = new System.Drawing.Size(373, 42);
+            this.lblEspejo.Size = new System.Drawing.Size(396, 44);
             this.lblEspejo.TabIndex = 6;
             this.lblEspejo.Text = "Seleccione su espejo";
             this.lblEspejo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -134,10 +134,12 @@
             // 
             // gr_espejo
             // 
+            this.gr_espejo.BackColor = System.Drawing.Color.LightSteelBlue;
             this.gr_espejo.Controls.Add(this.rb4);
             this.gr_espejo.Controls.Add(this.rb3);
             this.gr_espejo.Controls.Add(this.rb2);
             this.gr_espejo.Controls.Add(this.rb1);
+            this.gr_espejo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gr_espejo.Location = new System.Drawing.Point(106, 389);
             this.gr_espejo.Name = "gr_espejo";
             this.gr_espejo.Size = new System.Drawing.Size(486, 47);
@@ -149,10 +151,10 @@
             // rb4
             // 
             this.rb4.AutoSize = true;
-            this.rb4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb4.Location = new System.Drawing.Point(365, 13);
             this.rb4.Name = "rb4";
-            this.rb4.Size = new System.Drawing.Size(102, 28);
+            this.rb4.Size = new System.Drawing.Size(104, 27);
             this.rb4.TabIndex = 11;
             this.rb4.TabStop = true;
             this.rb4.Text = "Espejo 4";
@@ -161,10 +163,10 @@
             // rb3
             // 
             this.rb3.AutoSize = true;
-            this.rb3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb3.Location = new System.Drawing.Point(253, 13);
             this.rb3.Name = "rb3";
-            this.rb3.Size = new System.Drawing.Size(102, 28);
+            this.rb3.Size = new System.Drawing.Size(104, 27);
             this.rb3.TabIndex = 10;
             this.rb3.TabStop = true;
             this.rb3.Text = "Espejo 3";
@@ -173,10 +175,10 @@
             // rb2
             // 
             this.rb2.AutoSize = true;
-            this.rb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb2.Location = new System.Drawing.Point(127, 13);
             this.rb2.Name = "rb2";
-            this.rb2.Size = new System.Drawing.Size(102, 28);
+            this.rb2.Size = new System.Drawing.Size(104, 27);
             this.rb2.TabIndex = 9;
             this.rb2.TabStop = true;
             this.rb2.Text = "Espejo 2";
@@ -185,10 +187,10 @@
             // rb1
             // 
             this.rb1.AutoSize = true;
-            this.rb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb1.Location = new System.Drawing.Point(19, 13);
             this.rb1.Name = "rb1";
-            this.rb1.Size = new System.Drawing.Size(102, 28);
+            this.rb1.Size = new System.Drawing.Size(104, 27);
             this.rb1.TabIndex = 8;
             this.rb1.TabStop = true;
             this.rb1.Text = "Espejo 1";
@@ -198,7 +200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(689, 513);
             this.Controls.Add(this.gr_espejo);
             this.Controls.Add(this.lblEspejo);

@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblPeluquero = new System.Windows.Forms.Label();
             this.lblDateTime = new System.Windows.Forms.Label();
             this.btnContinuar = new System.Windows.Forms.Button();
@@ -41,11 +43,11 @@
             this.rb_Lavado = new System.Windows.Forms.RadioButton();
             this.rb_Corte = new System.Windows.Forms.RadioButton();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.txt_Peluquero = new System.Windows.Forms.TextBox();
             this.Id_Hs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdPeluquero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Peluquero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_Peluquero = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
@@ -54,12 +56,12 @@
             // 
             this.lblPeluquero.AutoSize = true;
             this.lblPeluquero.BackColor = System.Drawing.Color.PapayaWhip;
-            this.lblPeluquero.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeluquero.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeluquero.ForeColor = System.Drawing.SystemColors.InfoText;
             this.lblPeluquero.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblPeluquero.Location = new System.Drawing.Point(12, 48);
             this.lblPeluquero.Name = "lblPeluquero";
-            this.lblPeluquero.Size = new System.Drawing.Size(531, 37);
+            this.lblPeluquero.Size = new System.Drawing.Size(489, 33);
             this.lblPeluquero.TabIndex = 6;
             this.lblPeluquero.Text = "Busque su peluquero de preferencia";
             this.lblPeluquero.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -68,12 +70,12 @@
             // 
             this.lblDateTime.AutoSize = true;
             this.lblDateTime.BackColor = System.Drawing.Color.PapayaWhip;
-            this.lblDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateTime.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateTime.ForeColor = System.Drawing.SystemColors.InfoText;
             this.lblDateTime.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblDateTime.Location = new System.Drawing.Point(549, 48);
             this.lblDateTime.Name = "lblDateTime";
-            this.lblDateTime.Size = new System.Drawing.Size(419, 37);
+            this.lblDateTime.Size = new System.Drawing.Size(392, 33);
             this.lblDateTime.TabIndex = 8;
             this.lblDateTime.Text = "Seleccione una fecha y hora";
             this.lblDateTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -81,10 +83,10 @@
             // btnContinuar
             // 
             this.btnContinuar.BackColor = System.Drawing.Color.Honeydew;
-            this.btnContinuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContinuar.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContinuar.Location = new System.Drawing.Point(477, 389);
             this.btnContinuar.Name = "btnContinuar";
-            this.btnContinuar.Size = new System.Drawing.Size(152, 44);
+            this.btnContinuar.Size = new System.Drawing.Size(155, 44);
             this.btnContinuar.TabIndex = 10;
             this.btnContinuar.Text = "Continuar";
             this.btnContinuar.UseVisualStyleBackColor = false;
@@ -93,7 +95,7 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Honeydew;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(308, 389);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(146, 44);
@@ -106,12 +108,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.PapayaWhip;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Location = new System.Drawing.Point(75, 172);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(332, 37);
+            this.label1.Size = new System.Drawing.Size(308, 33);
             this.label1.TabIndex = 12;
             this.label1.Text = "Seleccione un servicio";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -122,6 +124,7 @@
             this.groupBox1.Controls.Add(this.rb_Crema);
             this.groupBox1.Controls.Add(this.rb_Lavado);
             this.groupBox1.Controls.Add(this.rb_Corte);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(64, 229);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(343, 108);
@@ -132,10 +135,10 @@
             // rb_Tintura
             // 
             this.rb_Tintura.AutoSize = true;
-            this.rb_Tintura.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Tintura.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb_Tintura.Location = new System.Drawing.Point(201, 68);
             this.rb_Tintura.Name = "rb_Tintura";
-            this.rb_Tintura.Size = new System.Drawing.Size(86, 28);
+            this.rb_Tintura.Size = new System.Drawing.Size(88, 27);
             this.rb_Tintura.TabIndex = 3;
             this.rb_Tintura.TabStop = true;
             this.rb_Tintura.Text = "Tintura";
@@ -144,10 +147,10 @@
             // rb_Crema
             // 
             this.rb_Crema.AutoSize = true;
-            this.rb_Crema.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Crema.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb_Crema.Location = new System.Drawing.Point(41, 68);
             this.rb_Crema.Name = "rb_Crema";
-            this.rb_Crema.Size = new System.Drawing.Size(84, 28);
+            this.rb_Crema.Size = new System.Drawing.Size(92, 27);
             this.rb_Crema.TabIndex = 2;
             this.rb_Crema.TabStop = true;
             this.rb_Crema.Text = "Crema";
@@ -156,10 +159,10 @@
             // rb_Lavado
             // 
             this.rb_Lavado.AutoSize = true;
-            this.rb_Lavado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Lavado.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb_Lavado.Location = new System.Drawing.Point(201, 20);
             this.rb_Lavado.Name = "rb_Lavado";
-            this.rb_Lavado.Size = new System.Drawing.Size(89, 28);
+            this.rb_Lavado.Size = new System.Drawing.Size(98, 27);
             this.rb_Lavado.TabIndex = 1;
             this.rb_Lavado.TabStop = true;
             this.rb_Lavado.Text = "Lavado";
@@ -168,10 +171,10 @@
             // rb_Corte
             // 
             this.rb_Corte.AutoSize = true;
-            this.rb_Corte.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Corte.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb_Corte.Location = new System.Drawing.Point(41, 20);
             this.rb_Corte.Name = "rb_Corte";
-            this.rb_Corte.Size = new System.Drawing.Size(73, 28);
+            this.rb_Corte.Size = new System.Drawing.Size(79, 27);
             this.rb_Corte.TabIndex = 0;
             this.rb_Corte.TabStop = true;
             this.rb_Corte.Text = "Corte";
@@ -182,37 +185,45 @@
             this.dgv.AllowUserToAddRows = false;
             this.dgv.AllowUserToDeleteRows = false;
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgv.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id_Hs,
             this.FechaHora,
             this.IdPeluquero,
             this.Peluquero});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.Format = "f";
-            dataGridViewCellStyle4.NullValue = null;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.Format = "f";
+            dataGridViewCellStyle3.NullValue = null;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv.Location = new System.Drawing.Point(569, 104);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv.Size = new System.Drawing.Size(375, 242);
             this.dgv.TabIndex = 16;
-            // 
-            // txt_Peluquero
-            // 
-            this.txt_Peluquero.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Peluquero.Location = new System.Drawing.Point(95, 104);
-            this.txt_Peluquero.Name = "txt_Peluquero";
-            this.txt_Peluquero.Size = new System.Drawing.Size(277, 29);
-            this.txt_Peluquero.TabIndex = 17;
-            this.txt_Peluquero.TextChanged += new System.EventHandler(this.txt_Peluquero_TextChanged);
             // 
             // Id_Hs
             // 
@@ -223,12 +234,12 @@
             // 
             // FechaHora
             // 
-            dataGridViewCellStyle3.NullValue = null;
-            this.FechaHora.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.NullValue = null;
+            this.FechaHora.DefaultCellStyle = dataGridViewCellStyle2;
             this.FechaHora.HeaderText = "FechaHora";
             this.FechaHora.Name = "FechaHora";
             this.FechaHora.ReadOnly = true;
-            this.FechaHora.Width = 85;
+            this.FechaHora.Width = 93;
             // 
             // IdPeluquero
             // 
@@ -242,7 +253,16 @@
             this.Peluquero.HeaderText = "Peluquero";
             this.Peluquero.Name = "Peluquero";
             this.Peluquero.ReadOnly = true;
-            this.Peluquero.Width = 80;
+            this.Peluquero.Width = 88;
+            // 
+            // txt_Peluquero
+            // 
+            this.txt_Peluquero.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Peluquero.Location = new System.Drawing.Point(95, 104);
+            this.txt_Peluquero.Name = "txt_Peluquero";
+            this.txt_Peluquero.Size = new System.Drawing.Size(277, 31);
+            this.txt_Peluquero.TabIndex = 17;
+            this.txt_Peluquero.TextChanged += new System.EventHandler(this.txt_Peluquero_TextChanged);
             // 
             // Turno
             // 

@@ -40,22 +40,22 @@
             // 
             this.lblBienvenido.AutoSize = true;
             this.lblBienvenido.BackColor = System.Drawing.Color.LavenderBlush;
-            this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenido.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBienvenido.ForeColor = System.Drawing.SystemColors.InfoText;
             this.lblBienvenido.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblBienvenido.Location = new System.Drawing.Point(207, 9);
             this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(288, 55);
+            this.lblBienvenido.Size = new System.Drawing.Size(311, 58);
             this.lblBienvenido.TabIndex = 0;
             this.lblBienvenido.Text = "¡Bienvenido!";
             this.lblBienvenido.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtDNI
             // 
-            this.txtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDNI.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDNI.Location = new System.Drawing.Point(124, 146);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(444, 62);
+            this.txtDNI.Size = new System.Drawing.Size(444, 66);
             this.txtDNI.TabIndex = 1;
             this.txtDNI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -63,12 +63,12 @@
             // 
             this.lblDNI.AutoSize = true;
             this.lblDNI.BackColor = System.Drawing.Color.PapayaWhip;
-            this.lblDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDNI.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDNI.ForeColor = System.Drawing.SystemColors.InfoText;
             this.lblDNI.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblDNI.Location = new System.Drawing.Point(210, 101);
+            this.lblDNI.Location = new System.Drawing.Point(210, 100);
             this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(265, 42);
+            this.lblDNI.Size = new System.Drawing.Size(273, 44);
             this.lblDNI.TabIndex = 4;
             this.lblDNI.Text = "Ingrese su DNI";
             this.lblDNI.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -76,7 +76,7 @@
             // btnContinuar
             // 
             this.btnContinuar.BackColor = System.Drawing.Color.Honeydew;
-            this.btnContinuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContinuar.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContinuar.Location = new System.Drawing.Point(245, 424);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(195, 55);
@@ -87,10 +87,10 @@
             // 
             // txt_Nombre
             // 
-            this.txt_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Nombre.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Nombre.Location = new System.Drawing.Point(124, 319);
             this.txt_Nombre.Name = "txt_Nombre";
-            this.txt_Nombre.Size = new System.Drawing.Size(444, 62);
+            this.txt_Nombre.Size = new System.Drawing.Size(444, 66);
             this.txt_Nombre.TabIndex = 2;
             this.txt_Nombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_Nombre.Visible = false;
@@ -99,12 +99,12 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.Color.PapayaWhip;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.InfoText;
             this.lblNombre.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblNombre.Location = new System.Drawing.Point(94, 274);
+            this.lblNombre.Location = new System.Drawing.Point(94, 273);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(506, 42);
+            this.lblNombre.Size = new System.Drawing.Size(539, 44);
             this.lblNombre.TabIndex = 5;
             this.lblNombre.Text = "Ingrese su Nombre y Apellido";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -114,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(689, 513);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txt_Nombre);
