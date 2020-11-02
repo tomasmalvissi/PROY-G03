@@ -8,7 +8,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
+using MessageBox = System.Windows.MessageBox;
 
 namespace G3.WF
 {
@@ -82,7 +84,16 @@ namespace G3.WF
         private void btnContinuar_Click(object sender, EventArgs e)
         {
             AltaTurno();
-            this.Close();
+            MessageBoxResult result = MessageBox.Show("Su turno para el dia " + t.DateTime + " fue cargado con éxito!. \n\r Desea solicitar otro turno?", "OK", (MessageBoxButton)MessageBoxButtons.YesNo);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    CargaDgv();
+                    break;
+                case MessageBoxResult.No:
+                    this.Close();
+                    break;
+            }
         }
 
         private void txt_Peluquero_TextChanged(object sender, EventArgs e)
