@@ -83,16 +83,23 @@ namespace G3.WF
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            AltaTurno();
-            MessageBoxResult result = MessageBox.Show("Su turno para el dia " + t.DateTime + " fue cargado con éxito!. \n\r Desea solicitar otro turno?", "OK", (MessageBoxButton)MessageBoxButtons.YesNo);
-            switch (result)
+            if (!rb_Corte.Checked && !rb_Crema.Checked && !rb_Lavado.Checked && !rb_Tintura.Checked)
             {
-                case MessageBoxResult.Yes:
-                    CargaDgv();
-                    break;
-                case MessageBoxResult.No:
-                    this.Close();
-                    break;
+                MessageBox.Show("Elija una tarea para confirmar su turno");
+            }
+            else
+            {
+                AltaTurno();
+                MessageBoxResult result = MessageBox.Show("Su turno para el dia " + t.DateTime + " fue cargado con éxito!. \n\r Desea solicitar otro turno?", "OK", (MessageBoxButton)MessageBoxButtons.YesNo);
+                switch (result)
+                {
+                    case MessageBoxResult.Yes:
+                        CargaDgv();
+                        break;
+                    case MessageBoxResult.No:
+                        this.Close();
+                        break;
+                }
             }
         }
 

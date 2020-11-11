@@ -80,26 +80,40 @@ namespace G3.WF.PELUQUERO
                 p.Espejo = espejo;
                 dp.AltaPeluquero("Alta", p);
             }
-            else
-            {
-
-            }
         }
         #endregion
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            string dni = txtDNI.Text;
-            ConsultaCliente(dni);
-            flag++;
-
-            if (flag == 2)
+            if (String.IsNullOrWhiteSpace(txtDNI.Text))
             {
-                Panel p = new Panel(dni);
-                this.Hide();
-                p.Show();
+                MessageBox.Show("Escriba un DNI valido");
+            }
+            else
+            {
+                string dni = txtDNI.Text;
+                ConsultaCliente(dni);
+                flag++;
 
-                flag = 0;
+                if (flag == 2)
+                {
+                    Panel p = new Panel(dni);
+                    this.Hide();
+                    p.Show();
+
+                    flag = 0;
+                }
+            }
+        }
+
+        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia",
+                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
             }
         }
     }

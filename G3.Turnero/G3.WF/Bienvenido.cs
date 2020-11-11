@@ -59,26 +59,40 @@ namespace G3.WF
                 c.Id = int.Parse(dni);
                 dc.AltaClientes("Alta", c);
             }
-            else
-            {
-
-            }
         }
         #endregion
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            string dni = txtDNI.Text;
-            ConsultaCliente(dni);
-            flag++;
-
-            if (flag == 2)
+            if (String.IsNullOrWhiteSpace(txtDNI.Text))
             {
-                Turno t = new Turno(dni);
-                this.Hide();
-                t.Show();
+                MessageBox.Show("Escriba un DNI valido");
+            }
+            else
+            {
+                string dni = txtDNI.Text;
+                ConsultaCliente(dni);
+                flag++;
 
-                flag = 0;
+                if (flag == 2)
+                {
+                    Turno t = new Turno(dni);
+                    this.Hide();
+                    t.Show();
+
+                    flag = 0;
+                }
+            }
+        }
+
+        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia",
+                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
             }
         }
     }
