@@ -210,7 +210,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv.Location = new System.Drawing.Point(569, 104);
+            this.dgv.Location = new System.Drawing.Point(524, 104);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -222,7 +222,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(375, 242);
+            this.dgv.Size = new System.Drawing.Size(430, 242);
             this.dgv.TabIndex = 16;
             // 
             // Id_Hs

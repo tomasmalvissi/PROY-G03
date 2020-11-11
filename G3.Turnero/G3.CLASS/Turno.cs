@@ -11,6 +11,7 @@ namespace G3.CLASS
     [Table("Turnos")]
     public class Turno
     {
+        #region ATRIBUTOS/PROPIEDADES
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
@@ -29,5 +30,22 @@ namespace G3.CLASS
         public int PeluqueroId { get; set; }
         [ForeignKey("PeluqueroId")]
         public Peluquero Peluquero { get; set; }
+        #endregion
+
+        #region CONSTRUCTORES
+        public Turno()
+        {
+
+        }
+
+        public Turno(int ID, DateTime DiaHora, int TareaID, int PeluqueroID, int ClienteID)
+        {
+            Id = ID;
+            DateTime = DiaHora;
+            TareaId = TareaID;
+            ClienteId = ClienteID;
+            PeluqueroId = PeluqueroID;
+        }
+        #endregion
     }
 }

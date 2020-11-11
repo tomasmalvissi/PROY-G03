@@ -16,9 +16,8 @@ namespace G3.WF.PELUQUERO
     {
         private string DNI;
         DatosTurnos dt = new DatosTurnos();
-        G3.CLASS.Turno t = new CLASS.Turno();
         DatosHorarios dh = new DatosHorarios();
-        G3.CLASS.Horario h = new CLASS.Horario();
+
         public Panel(string dni)
         {
             InitializeComponent();
@@ -96,50 +95,51 @@ namespace G3.WF.PELUQUERO
 
         public void ABMHorario(string accion)
         {
-            h.Id = Convert.ToInt32(lbl_id_horario.Text);
-            h.DiaHora = picker_horario.Value;
-            h.PeluqueroId = Convert.ToInt32(DNI);
+            G3.CLASS.Horario horario = new
+               CLASS.Horario(Convert.ToInt32(lbl_id_horario.Text), picker_horario.Value,
+               (Convert.ToInt32(DNI)));
+
             switch (accion)
             {
                 case "Alta":
-                    dh.ABMHorarios("Alta", h);
+                    dh.ABMHorarios("Alta", horario);
                     break;
                 case "Modificar":
-                    dh.ABMHorarios("Modificar", h);
+                    dh.ABMHorarios("Modificar", horario);
                     break;
                 case "Eliminar":
-                    dh.ABMHorarios("Eliminar", h);
+                    dh.ABMHorarios("Eliminar", horario);
                     break;
             }
         }
 
         public void ABMTurnos(string accion)
         {
-            t.Id = Convert.ToInt32(lbl_id_turno.Text);
-            t.DateTime = picker_turno.Value;
-            t.TareaId = combo_TareaId.SelectedIndex + 1;
-            t.PeluqueroId = Convert.ToInt32(DNI);
-            t.ClienteId = Convert.ToInt32(lblClienteId.Text);
+            G3.CLASS.Turno turno = new 
+                CLASS.Turno(Convert.ToInt32(lbl_id_turno.Text), picker_turno.Value, 
+                combo_TareaId.SelectedIndex + 1, (Convert.ToInt32(DNI)), 
+                Convert.ToInt32(lblClienteId.Text));
 
             switch (accion)
             {
                 case "Modificar":
-                    dt.ABMTurnos("Modificar", t);
+                    dt.ABMTurnos("Modificar", turno);
                     break;
                 case "Eliminar":
-                    dt.ABMTurnos("Eliminar", t);
+                    dt.ABMTurnos("Eliminar", turno);
                     break;
             }
         }
         #endregion
 
+        #region EVENTOS
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
             Inicio i = new Inicio();
             i.Show();
         }
-
+        
         private void dgv_Horarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             GridToHorarios();
@@ -179,5 +179,6 @@ namespace G3.WF.PELUQUERO
             ABMTurnos("Eliminar");
             CargaDgTurnos();
         }
+        #endregion
     }
 }

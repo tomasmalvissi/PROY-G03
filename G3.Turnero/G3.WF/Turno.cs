@@ -18,8 +18,9 @@ namespace G3.WF
     {
         private string DNI;
         DatosTurnos dt = new DatosTurnos();
-        G3.CLASS.Turno t = new CLASS.Turno();
         DatosHorarios dh = new DatosHorarios();
+        public string fechaturno = "";
+        public int tarea;
         public Turno(string dni)
         {
             InitializeComponent();
@@ -35,45 +36,50 @@ namespace G3.WF
             dgv.Rows.Clear();
             DataSet ds = new DataSet();
             ds = dh.MostrarHorarios(txt_Peluquero.Text);
-            if(ds.Tables[0].Rows.Count > 0)
+            if (ds.Tables[0].Rows.Count > 0)
             {
-                foreach(DataRow dr in ds.Tables[0].Rows)
+                foreach (DataRow dr in ds.Tables[0].Rows)
                 {
                     dgv.Rows.Add(dr[0], dr[1], dr[2], dr[3]);
                 }
             }
-
         }
+
         public void AltaTurno()
         {
             if (rb_Corte.Checked == true)
             {
-                t.TareaId = 1;  
+                CreaTurno(1);
             }
             if (rb_Crema.Checked == true)
             {
-                t.TareaId = 2;
+                CreaTurno(2);
             }
-            if(rb_Lavado.Checked == true)
+            if (rb_Lavado.Checked == true)
             {
-                t.TareaId = 3;
+                CreaTurno(3);
             }
             if (rb_Tintura.Checked == true)
             {
-                t.TareaId = 4;
+                CreaTurno(4);
             }
+        }
 
+        public void CreaTurno(int tarea)
+        {
             var horario = Convert.ToInt32(dgv.CurrentRow.Cells[0].Value);
             var date = Convert.ToDateTime(dgv.CurrentRow.Cells[1].EditedFormattedValue);
-            t.DateTime = date;
-            t.PeluqueroId = Convert.ToInt32(dgv.CurrentRow.Cells[2].Value.ToString());
-            t.ClienteId = Convert.ToInt32(DNI);
+            var peluquero = Convert.ToInt32(dgv.CurrentRow.Cells[2].Value.ToString());
+            var dni = Convert.ToInt32(DNI);
 
+            G3.CLASS.Turno turno = new CLASS.Turno(1, date, tarea, peluquero, dni);
+            dt.AltaTurnos(turno, horario);
 
-            dt.AltaTurnos(t, horario);
+            fechaturno = Convert.ToString(date);
         }
         #endregion
 
+        #region VALIDACION
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -90,7 +96,7 @@ namespace G3.WF
             else
             {
                 AltaTurno();
-                MessageBoxResult result = MessageBox.Show("Su turno para el dia " + t.DateTime + " fue cargado con éxito!. \n\r Desea solicitar otro turno?", "OK", (MessageBoxButton)MessageBoxButtons.YesNo);
+                MessageBoxResult result = MessageBox.Show("Su turno para el dia " + fechaturno + " fue cargado con éxito!. \n\r Desea solicitar otro turno?", "OK", (MessageBoxButton)MessageBoxButtons.YesNo);
                 switch (result)
                 {
                     case MessageBoxResult.Yes:
@@ -102,10 +108,13 @@ namespace G3.WF
                 }
             }
         }
+        #endregion
 
+        #region EVENTOS
         private void txt_Peluquero_TextChanged(object sender, EventArgs e)
         {
             CargaDgv();
         }
+        #endregion
     }
 }

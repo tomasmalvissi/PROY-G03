@@ -16,7 +16,7 @@ namespace G3.WF
     public partial class Bienvenido : Form
     {
         DatosClientes dc = new DatosClientes();
-        Cliente c = new Cliente();
+        
         int flag = 0;
         public Bienvenido()
         {
@@ -55,13 +55,13 @@ namespace G3.WF
         {
             if (txt_Nombre.Text != "")
             {
-                c.Nombre_Apellido = txt_Nombre.Text;
-                c.Id = int.Parse(dni);
-                dc.AltaClientes("Alta", c);
+                Cliente cliente = new Cliente(int.Parse(dni), txt_Nombre.Text);
+                dc.AltaClientes("Alta", cliente);
             }
         }
         #endregion
 
+        #region VALIDACION
         private void btnContinuar_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtDNI.Text))
@@ -95,5 +95,6 @@ namespace G3.WF
                 return;
             }
         }
+        #endregion
     }
 }

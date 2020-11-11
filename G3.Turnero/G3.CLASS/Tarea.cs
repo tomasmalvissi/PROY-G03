@@ -11,6 +11,7 @@ namespace G3.CLASS
     [Table("Tareas")]
     public class Tarea
     {
+        #region ATRIBUTOS/PROPIEDADES
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         [Required]
@@ -22,5 +23,22 @@ namespace G3.CLASS
         public int ProductoId { get; set; }
         [ForeignKey("ProductoId")]
         public Producto Producto { get; set; }
+        #endregion
+
+        #region CONSTRUCTORES
+        public Tarea()
+        {
+
+        }
+
+        public Tarea(int ID, string Descr, string Tiemp, int Val, int PeluqID)
+        {
+            Id = ID;
+            Descripcion = Descr;
+            Tiempo = Tiemp;
+            Valor = Val;
+            ProductoId = PeluqID;
+        }
+        #endregion
     }
 }

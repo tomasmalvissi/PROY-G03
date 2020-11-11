@@ -11,11 +11,26 @@ namespace G3.CLASS
     [Table("Peluqueros")]
     public class Peluquero
     {
+        #region ATRIBUTOS/PROPIEDADES
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         [Required]
         public string Nombre { get; set; }
         [Required]
         public int Espejo { get; set; }
+        #endregion
+
+        #region CONSTRUCTORES
+        public Peluquero()
+        {
+
+        }
+        public Peluquero(int ID, string Nom, int Espej)
+        {
+            Id = ID;
+            Nombre = Nom;
+            Espejo = Espej;
+        }
+        #endregion
     }
 }

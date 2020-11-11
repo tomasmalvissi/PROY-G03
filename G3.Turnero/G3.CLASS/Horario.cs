@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace G3.CLASS
 {
+    #region ATRIBUTOS/PROPIEDADES
     [Table("Horarios")]
     public class Horario
     {
@@ -20,5 +21,20 @@ namespace G3.CLASS
         public int PeluqueroId { get; set; }
         [ForeignKey("PeluqueroId")]
         public Peluquero Peluquero { get; set; }
+        #endregion
+
+        #region CONSTRUCTORES
+        public Horario()
+        {
+
+        }
+
+        public Horario(int ID, DateTime DIAHORA, int Peluq)
+        {
+            Id = ID;
+            DiaHora = DIAHORA;
+            PeluqueroId = Peluq;
+        }
+        #endregion
     }
 }

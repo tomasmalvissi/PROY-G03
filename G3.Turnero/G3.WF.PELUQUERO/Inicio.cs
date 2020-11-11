@@ -16,7 +16,7 @@ namespace G3.WF.PELUQUERO
     public partial class Inicio : Form
     {
         DatosPeluquero dp = new DatosPeluquero();
-        Peluquero p = new Peluquero();
+
         int espejo = 0;
         int flag = 0;
         public Inicio()
@@ -75,14 +75,13 @@ namespace G3.WF.PELUQUERO
                     espejo = 4;
                 }
 
-                p.Nombre = txt_Nombre.Text;
-                p.Id = int.Parse(dni);
-                p.Espejo = espejo;
-                dp.AltaPeluquero("Alta", p);
+                Peluquero peluquero = new Peluquero(int.Parse(dni), txt_Nombre.Text, espejo);
+                dp.AltaPeluquero("Alta", peluquero);
             }
         }
         #endregion
 
+        #region VALIDACIÓN
         private void btnContinuar_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtDNI.Text))
@@ -116,5 +115,6 @@ namespace G3.WF.PELUQUERO
                 return;
             }
         }
+        #endregion
     }
 }
