@@ -16,7 +16,6 @@ namespace G3.CLASS
         public int Id { get; set; }
         [Required]
         public string Nombre_Apellido { get; set; }
-        public (int, string Text) P { get; }
         #endregion
 
         #region CONSTRUCTORES
