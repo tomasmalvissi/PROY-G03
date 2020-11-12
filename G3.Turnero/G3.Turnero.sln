@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G3.DATA", "G3.DATA\G3.DATA.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G3.WF.PELUQUERO", "G3.WF.PELUQUERO\G3.WF.PELUQUERO.csproj", "{C0F11239-A253-477E-B5C5-21B06B144F7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estadisticas", "Estadisticas\Estadisticas.csproj", "{F10CFC37-4391-4B1B-BA5F-815F4EB14D7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C0F11239-A253-477E-B5C5-21B06B144F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0F11239-A253-477E-B5C5-21B06B144F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0F11239-A253-477E-B5C5-21B06B144F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F10CFC37-4391-4B1B-BA5F-815F4EB14D7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F10CFC37-4391-4B1B-BA5F-815F4EB14D7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F10CFC37-4391-4B1B-BA5F-815F4EB14D7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F10CFC37-4391-4B1B-BA5F-815F4EB14D7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

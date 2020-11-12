@@ -116,5 +116,69 @@ namespace G3.DATA
             }
             return ds;
         }
+
+        public DataSet TurnosClientes()
+        {
+            string orden = string.Empty;
+            orden = "select c.Nombre_Apellido, count(t.Id) as 'Turnos por cliente' " +
+                     "from Clientes c, Turnos t " +
+                      "where t.ClienteId = c.Id " +
+                      "group by c.Nombre_Apellido " +
+                      "order by 'Turnos por cliente' desc";
+
+            SqlCommand sqlcmd = new SqlCommand(orden, conexion);
+            DataSet ds = new DataSet();
+            SqlDataAdapter da = new SqlDataAdapter();
+
+            try
+            {
+                AbrirConex();
+                sqlcmd.ExecuteNonQuery();
+                da.SelectCommand = sqlcmd;
+                da.Fill(ds);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("error al listar Cliente", e);
+            }
+            finally
+            {
+                CerrarConex();
+                sqlcmd.Dispose();
+            }
+            return ds;
+        }
+
+        public DataSet TurnosPeluqueros()
+        {
+            string orden = string.Empty;
+            orden = "select p.Nombre, count(t.Id) as 'Cantidad de turnos por peluquero' " +
+                     "from Peluqueros p, Turnos t " +
+                     "where t.PeluqueroId = p.Id " +
+                      "group by p.Nombre " +
+                      "order by 'Cantidad de turnos por peluquero' desc";
+
+            SqlCommand sqlcmd = new SqlCommand(orden, conexion);
+            DataSet ds = new DataSet();
+            SqlDataAdapter da = new SqlDataAdapter();
+
+            try
+            {
+                AbrirConex();
+                sqlcmd.ExecuteNonQuery();
+                da.SelectCommand = sqlcmd;
+                da.Fill(ds);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("error al listar Peluquero", e);
+            }
+            finally
+            {
+                CerrarConex();
+                sqlcmd.Dispose();
+            }
+            return ds;
+        }
     }
 }
